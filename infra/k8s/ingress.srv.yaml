@@ -5,13 +5,13 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
-  ingressClassName: nginx  # Updated to use ingressClassName
+  ingressClassName: nginx # Updated to use ingressClassName
   rules:
     - host: ticketing.dev
       http:
         paths:
-          - path: /api/users/?(.*)
-            pathType: ImplementationSpecific  # Updated pathType for regex support
+          - path: /
+            pathType: ImplementationSpecific # Updated pathType for regex support
             backend:
               service:
                 name: auth-srv
