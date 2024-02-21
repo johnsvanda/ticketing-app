@@ -14,14 +14,7 @@ spec:
     spec:
       containers:
         - name: auth
-          image: johnsvanda/auth
-          resources:
-            requests:
-              memory: "1Gi"  # Adjusted from 4Gi to 1Gi
-              cpu: "500m"    # Adjusted as needed
-            limits:
-              memory: "2Gi"  # Adjusted as needed
-              cpu: "1000m"
+          image: us.gcr.io/ticketing-dev-413213/auth
           ports:
             - containerPort: 3000
 ---
